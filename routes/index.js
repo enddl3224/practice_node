@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 router.post('/', async(req, res, next) =>{
   try{
     await db.query(`
-      INSERT INTO USER(username, password)
+      INSERT INTO USERS(username, password)
       VALUES("${req.body.username}", "${req.body.password}")
   `)
     console.log(req.body)
